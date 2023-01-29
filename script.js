@@ -3,6 +3,7 @@ import { updatePipes, setupPipes, getPassedPipesCount, getPipeRects } from "./pi
 
 /* 1)thing belows calls handle start  2) title.classList.add('hide') hides title when key pressed */
 document.addEventListener("keypress", handleStart, { once: true });
+document.addEventListener("click", handleStart, { once: true })
 const title = document.querySelector("[data-title]");
 const subtitle = document.querySelector("[data-subtitle]");
 
