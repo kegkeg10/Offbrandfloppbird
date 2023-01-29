@@ -1,0 +1,70 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image:url('https://i.pinimg.com/originals/72/5e/5d/725e5dc00ba49c240cd489e7b87e0496.jpg')
+}
+
+.title {
+    font-size: 75px;
+    color: crimson;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    margin: 0;
+    flex-direction: column;
+}
+.subtitle {
+    margin-top: .5rem;
+    color: rgb(0, 183, 255);
+    font-family: cursive;
+}
+
+.hide {
+    display: none;
+}
+
+.bird {
+    --bird-top: -1000;
+    --bird-size: 60px;
+    position: absolute;
+    background-color: hsl(50, 75%, 50%);
+    width: var(--bird-size);
+    height: var(--bird-size);
+    left: var(--bird-size);
+    top: calc(var(--bird-top) * 1px);
+    border-radius: 50%;
+}
+
+.pipe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(var(--pipe-width) * 1px);   
+    left: calc(var(--pipe-left) * 1px); 
+}
+
+.pipe > .segment {
+    position: absolute;
+    width: 100%;
+    background-color: hsl(100, 75%, 50%);
+}
+
+.pipe > .top {
+    top: 0;
+    bottom: calc(var(--hole-top) * 1px);
+}
+
+.pipe > .bottom {
+    bottom: 0;
+    top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px));
+}
+
+
+
